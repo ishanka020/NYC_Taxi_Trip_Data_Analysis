@@ -76,3 +76,9 @@ df_cleaned = df_cleaned.filter(
     (col("total_amount") < 500)
 )
 df_cleaned.count()
+
+# Save cleaned data
+df_cleaned.write.mode("overwrite").parquet("/home/ariso/Documents/bigDataAssignment/NYC_Taxi_Trip_Data_Analysis/data/cleanedData")
+
+# Stop Spark session
+spark.stop()
