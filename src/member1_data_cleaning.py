@@ -1,8 +1,4 @@
 from pyspark.sql import SparkSession
-from pathlib import Path
-from pyspark.ml.feature import VectorAssembler
-from pyspark.ml.regression import LinearRegression
-from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.sql.functions import col
 # Create SparkSession in local mode
 spark = SparkSession.builder \
