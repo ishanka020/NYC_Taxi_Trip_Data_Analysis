@@ -58,3 +58,14 @@ plt.title("Average Tip Ratio by Passenger Count")
 plt.xlabel("Passenger Count")
 plt.ylabel("Average Tip / Fare Ratio")
 plt.show()
+
+# 8. Collect average distance data to Pandas for plotting
+pdf_distance = agg_passenger_count.select("passenger_count", "avg_distance").toPandas()
+
+# 9. Plot average distance by passenger count using Seaborn
+plt.figure(figsize=(8, 5))
+sns.barplot(x="passenger_count", y="avg_distance", data=pdf_distance)
+plt.title("Average Trip Distance by Passenger Count")
+plt.xlabel("Passenger Count")
+plt.ylabel("Average Trip Distance (miles)")
+plt.show()
