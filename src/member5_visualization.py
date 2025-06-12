@@ -159,7 +159,7 @@ weights = [G[u][v]['weight'] / 100 for u, v in G.edges()]
 nx.draw_networkx_nodes(G, pos, node_color='skyblue', node_size=700)
 nx.draw_networkx_edges(G, pos, edge_color='gray', width=weights, arrows=True, arrowstyle='-|>', arrowsize=15)
 nx.draw_networkx_labels(G, pos, font_size=10, font_weight='bold')
-plt.title("Top 20 Most Frequent Pickup → Dropoff Routes", fontsize=14)
+plt.title("Top 20 Most Frequent Pickup - Dropoff Routes", fontsize=14)
 plt.axis('off')
 plt.tight_layout()
 plt.savefig("plots/top_routes_graph.png")
