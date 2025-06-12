@@ -236,6 +236,34 @@ This part focuses on analyzing spatial patterns and route behavior in NYC taxi t
 
 ## Summary of results and conclusions 
 
+###  Data Cleaning Results
+    Removed invalid records: Filtered out rows with null values, negative or extreme values for fare, distance, passenger count, tips, tolls, and total amount.
+
+    Applied logical consistency checks: Ensured drop-off time was after pickup time.
+
+    Outlier removal: Kept only realistic values:
+
+        Fare: $3 to $400
+        Trip Distance: 0.62 to 120 miles
+        Tip: $0 to $50
+
+    Reduced noise in the dataset, ensuring clean and reliable records for analysis.
+
+###  Passenger Behavior Analysis Results
+    Ride Type Segmentation:
+
+    Solo rides tend to have shorter durations and distances, and slightly lower average fares and tips compared to group rides.
+
+    Passenger Count Insights:
+
+    Tip ratio (tip/fare) is generally higher for rides with 1 or 2 passengers, indicating better tipping behavior in smaller groups.
+
+    Average trip distance increases slightly with more passengers, possibly indicating group rides cover longer routes.
+
+    Visual Findings:
+        Bar plots clearly show trends in tip ratios and trip distances across different passenger counts.
+        Helped uncover passenger behavior patterns useful for business insights and driver strategies.
+
 ### Exploratory Data Analysis (EDA)
 
     Summary of Results:
