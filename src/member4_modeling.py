@@ -1,3 +1,4 @@
+#tip_amount modeling
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import (
     col, hour, dayofweek, unix_timestamp, when, log1p, sqrt, skewness,
