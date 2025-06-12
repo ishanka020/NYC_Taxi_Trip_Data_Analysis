@@ -6,7 +6,7 @@ spark = SparkSession.builder \
     .master("local[*]") \
     .getOrCreate()
 
-df = spark.read.parquet("/home/ariso/Documents/bigDataAssignment/NYC_Taxi_Trip_Data_Analysis/data/rawData")
+df = spark.read.parquet("/Your-path/data/rawData")
 
 df.printSchema()
 df.show(5)

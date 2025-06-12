@@ -14,7 +14,7 @@ spark = SparkSession.builder \
     .master("local[*]") \
     .getOrCreate()
 
-folder_path = Path(r"C:\BigData\cleaned_data")
+folder_path = Path(r"\Your-path\data\cleanedData")
 parquet_files = sorted(folder_path.glob("*.parquet"))
 
 print(f"Found {len(parquet_files)} parquet files:")

@@ -5,7 +5,7 @@ import seaborn as sns
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import hour, count, col, when, avg, date_format, sum
  
-PARQUET_PATH = "E:\UOM_FIT\L4S2\Big_Data\NYC_Taxi_Trip_Data_Analysis\data"
+PARQUET_PATH = "/Your-path/data/cleanedData"
 
 spark = SparkSession.builder.appName("NYC Taxi Analysis").getOrCreate()
 

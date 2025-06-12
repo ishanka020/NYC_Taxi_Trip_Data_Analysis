@@ -10,12 +10,12 @@ from common import init_spark, get_project_paths
 spark = init_spark("Member2 EDA")
 print("Spark version:", spark.version)
 
-data_path, output_path = get_project_paths()
-output_path = output_path / "member2_eda_output"
-output_path.mkdir(parents=True, exist_ok=True)
+# data_path, output_path = get_project_paths()
+# output_path = output_path / "member2_eda_output"
+# output_path.mkdir(parents=True, exist_ok=True)
 
-parquet_files = sorted(data_path.glob("*.parquet"))
-df = spark.read.parquet(*[str(f) for f in parquet_files])
+# parquet_files = sorted(data_path.glob("*.parquet"))
+df = spark.read.parquet("/Your-path/data/cleanedData")
 
 # -------------------------------------
 # 1. Trip Statistics: Average fare, distance

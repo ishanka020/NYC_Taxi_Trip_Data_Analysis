@@ -7,7 +7,7 @@ import seaborn as sns
 spark = SparkSession.builder.appName("PassengerBehaviorAnalysis").getOrCreate()
 
 # Load cleaned data
-df_new = spark.read.parquet("/home/ariso/Documents/bigDataAssignment/NYC_Taxi_Trip_Data_Analysis/data/cleanedData")
+df_new = spark.read.parquet("/Your-path/data/cleanedData")
 
 
 # 1. Calculate trip duration in minutes

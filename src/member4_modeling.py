@@ -21,7 +21,7 @@ spark = SparkSession.builder \
 
 # Load cleaned dataset
 # Set folder path (raw string to avoid escape errors)
-folder_path = Path(r"D:\L4S2\Big Data\assignment\NYC_Taxi_Trip_Data_Analysis\data\cleaned")
+folder_path = Path(r"\Your-path\data\cleanedData")
 
 # Get list of all .parquet files
 parquet_files = [str(p) for p in folder_path.glob("*.parquet")]
