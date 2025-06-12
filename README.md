@@ -89,49 +89,44 @@ Key Steps
 1.Initialize SparkSession
 2.Load and Combine Cleaned Data  
 Read multiple parquet files and union all datasets into a single combined DataFrame for comprehensive analysis
-Display schema and basic information about the merged dataset
 
 3.Data Quality Assessment
-Check for null or invalid location IDs in pickup (PULocationID) and dropoff (DOLocationID) zones
-Filter out records with zero or null location values to ensure data integrity
-Report data quality statistics and valid trip counts
+Check for null or invalid location IDs in pickup (PULocationID) and dropoff (DOLocationID) zones and filter out records with zero or null location values to ensure data integrity
 
 4.Calculate Trip Duration
 Compute trip duration in minutes using pickup and dropoff timestamps
-Use unix_timestamp() function to calculate time differences
-Create enhanced dataset with duration metrics for analysis
 
 5.Zone Activity Analysis
-Pickup Zone Analysis: Group trips by pickup location and count frequency
-Dropoff Zone Analysis: Group trips by dropoff location and count frequency  
-Combined Zone Activity: Merge pickup and dropoff counts to identify most active zones overall
-Rank zones by total activity (pickup + dropoff combined)
+ Pickup Zone Analysis: Group trips by pickup location and count frequency
+ Dropoff Zone Analysis: Group trips by dropoff location and count frequency  
+ Combined Zone Activity: Merge pickup and dropoff counts to identify most active zones overall
+ Rank zones by total activity (pickup + dropoff combined)
 
 6.Route Analysis
-Common Routes: Group trips by pickup-dropoff zone pairs to identify popular corridors
-Route Statistics: Calculate average distance, duration, and fare for each route
-Statistical Filtering: Focus on routes with minimum 10+ trips for reliability
-Route Ranking: Order routes by trip frequency to find most popular connections
+ Common Routes: Group trips by pickup-dropoff zone pairs to identify popular corridors
+ Route Statistics: Calculate average distance, duration, and fare for each route
+ Statistical Filtering: Focus on routes with minimum 10+ trips for reliability
+ Route Ranking: Order routes by trip frequency to find most popular connections
 
 7.Trip Duration Analysis
-Longest Routes: Identify zone pairs with highest average trip duration
-Shortest Routes: Find quickest routes between zones (minimum 50 trips threshold)
-Duration Patterns: Analyze time variations across different geographic corridors
+ Longest Routes: Identify zone pairs with highest average trip duration
+ Shortest Routes: Find quickest routes between zones (minimum 50 trips threshold)
+ Duration Patterns: Analyze time variations across different geographic corridors
 
 8.Route Efficiency Analysis  
-Speed Calculation: Compute average speed (mph) for each route using distance/time
-Efficiency Ranking: Identify fastest and slowest routes by average speed
-Performance Filtering: Focus on routes with 30+ trips for statistical significance
+ Speed Calculation: Compute average speed (mph) for each route using distance/time
+ Efficiency Ranking: Identify fastest and slowest routes by average speed
+ Performance Filtering: Focus on routes with 30+ trips for statistical significance
 
 9.Same-Zone Trip Analysis
-Filter trips where pickup and drop-off zones are identical
-Analyze local trip patterns within individual zones
-Calculate statistics for short-distance, intra-zone travel behavior
+ Filter trips where pickup and drop-off zones are identical
+ Analyze local trip patterns within individual zones
+ Calculate statistics for short-distance, intra-zone travel behavior
 
 10.Data Aggregation for Visualization
-Route Summary: Prepare aggregated route data with key metrics
-Zone Activity Summary: Create zone-level activity rankings
-Efficiency Metrics: Compile speed and performance data by route
+ Route Summary: Prepare aggregated route data with key metrics
+ Zone Activity Summary: Create zone-level activity rankings
+ Efficiency Metrics: Compile speed and performance data by route
 
 Predicting Tip Amount with models
 
