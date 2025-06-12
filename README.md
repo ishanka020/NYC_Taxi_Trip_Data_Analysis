@@ -290,7 +290,7 @@ This part focuses on analyzing spatial patterns and route behavior in NYC taxi t
 
     Summary of Results:
     
-    ![Capture](https://github.com/user-attachments/assets/61c2c5b5-85f8-48dc-82a0-26015d249bb9)
+![Capture](https://github.com/user-attachments/assets/61c2c5b5-85f8-48dc-82a0-26015d249bb9)
     
     Conclusion
     
